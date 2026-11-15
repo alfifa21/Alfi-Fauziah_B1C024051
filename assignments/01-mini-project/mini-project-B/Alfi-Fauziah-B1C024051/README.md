@@ -1,11 +1,5 @@
-A. Mengapa Evaluasi Model Tidak Cukup Hanya Menggunakan Accuracy?
+Kesimpulan
 
-Dalam mendeteksi kanker payudara, kita tidak bisa hanya melihat nilai Accuracy untuk menilai apakah model sudah bekerja dengan baik. Ada beberapa hal yang perlu diperhatikan.
-Data bisa tidak seimbang
-Misalnya, jumlah pasien sehat jauh lebih banyak daripada pasien kanker. Dalam kondisi ini, model bisa saja memiliki nilai Accuracy yang tinggi hanya karena lebih sering menebak pasien sebagai sehat, padahal belum tentu mampu mendeteksi pasien kanker dengan baik.
-Risiko False Negative
-False Negative terjadi ketika pasien yang sebenarnya terkena kanker justru dianggap sehat oleh model. Kesalahan seperti ini cukup berbahaya karena pasien bisa terlambat mendapatkan pemeriksaan atau pengobatan.
-Recall juga penting
-Recall menunjukkan seberapa baik model dalam menemukan pasien yang benar-benar terkena kanker. Semakin tinggi nilai Recall, semakin sedikit kemungkinan pasien kanker yang terlewat.
+Berdasarkan hasil pengujian klasifikasi kanker payudara menggunakan algoritma Logistic Regression dan Random Forest, diperoleh bahwa Logistic Regression memiliki kinerja yang lebih baik dibandingkan Random Forest. Hal ini ditunjukkan oleh nilai accuracy, precision, recall, dan F1-score Logistic Regression yang mencapai 98,83%, sedangkan Random Forest memperoleh nilai sekitar 93,55–93,57%.
 
-Jadi, dalam kasus deteksi kanker payudara, Accuracy yang tinggi saja belum cukup. Model juga perlu memiliki nilai Recall yang tinggi agar sebanyak mungkin pasien yang benar-benar terkena kanker dapat terdeteksi.
+Hasil Confusion Matrix juga menunjukkan bahwa Logistic Regression mampu mengklasifikasikan 169 dari 171 data dengan benar, sedangkan Random Forest mengklasifikasikan 160 data dengan benar. Pada kelas malignant, Logistic Regression berhasil mengidentifikasi 63 dari 64 data, sementara Random Forest berhasil mengidentifikasi 58 dari 64 data. Dengan demikian, Logistic Regression menunjukkan performa klasifikasi yang lebih baik pada dataset yang digunakan dalam pengujian ini.
